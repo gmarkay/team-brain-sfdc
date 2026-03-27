@@ -1,3 +1,43 @@
 <template>
-    
+    <div class="slds-p-around_medium">
+        <div class="slds-form slds-form_stacked">
+            <div class="slds-form-element">
+                <lightning-input
+                    label="Name"
+                    value={cdName}
+                    onchange={handleNameChange}>
+                </lightning-input>
+            </div>
+            <div class="slds-form-element slds-m-top_small">
+                <lightning-input
+                    label="Date"
+                    type="date"
+                    value={cdDate}
+                    onchange={handleDate}>
+                </lightning-input>
+            </div>
+            <div class="slds-form-element slds-m-top_small">
+                <lightning-input
+                    label="Referral"
+                    type="toggle"
+                    checked={cdReferal}
+                    onchange={handleRef}>
+                </lightning-input>
+            </div>
+            <div class="slds-form-element slds-m-top_small">
+                <lightning-input
+                    label="Description"
+                    value={cdDescription}
+                    onchange={handleDesc}>
+                </lightning-input>
+            </div>
+        </div>
+        <div class="slds-m-top_medium slds-align_absolute-center">
+            <lightning-button
+                label="Create Client Documentation"
+                variant="brand"
+                onclick={createCd}>
+            </lightning-button>
+        </div>
+    </div>
 </template>
